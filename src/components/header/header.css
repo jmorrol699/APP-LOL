@@ -1,0 +1,95 @@
+.lol-header {
+  background-color: rgba(1, 10, 19, 0.95);
+  border-bottom: 2px solid #c8aa6e; /* Dorado Hextech */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.lol-brand a {
+  color: #f0e6d2;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.gold-text {
+  color: #c8aa6e;
+  margin: 0 4px;
+}
+
+.lol-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.lol-nav a {
+  color: #a09b8c;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 10px 0;
+}
+
+.lol-nav a:hover,
+.lol-nav a.active-link {
+  color: #f0e6d2;
+}
+
+/* Línea dorada activa debajo del menú */
+.lol-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c8aa6e;
+  transition: width 0.3s ease;
+}
+
+.lol-nav a:hover::after,
+.lol-nav a.active-link::after {
+  width: 100%;
+}
+
+.btn-play {
+  background: linear-gradient(135deg, #11b3cd 0%, #1e2328 100%);
+  color: #f0e6d2;
+  border: 1px solid #c8aa6e;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-play:hover {
+  background: linear-gradient(135deg, #11b3cd 0%, #005a82 100%);
+  box-shadow: 0 0 15px rgba(17, 179, 205, 0.6);
+  color: #ffffff;
+}

@@ -1,0 +1,61 @@
+.lol-footer {
+  background-color: #010a13;
+  border-top: 1px solid #1e2328;
+  padding: 60px 24px 30px 24px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  color: #c8aa6e;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li { margin-bottom: 12px; }
+
+.footer-col a {
+  color: #a09b8c;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: #f0e6d2;
+}
+
+.lol-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(200,170,110,0) 0%, rgba(200,170,110,0.3) 50%, rgba(200,170,110,0) 100%);
+  margin-bottom: 30px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.legal-text {
+  font-size: 0.75rem;
+  color: #525454;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}

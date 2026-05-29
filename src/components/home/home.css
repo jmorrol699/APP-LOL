@@ -1,0 +1,204 @@
+/* ==========================================
+   ESTILOS GENERALES Y HERO
+   ========================================== */
+.lol-home {
+  background-color: #010a13; /* Fondo azul oscuro profundo de Riot */
+  color: #a09b8c;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-lol {
+  /* Imagen de fondo oficial del universo LoL */
+  background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+  position: relative;
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(1, 10, 19, 0.3) 0%, rgba(1, 10, 19, 1) 100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero-tag {
+  color: #c8aa6e; /* Dorado Hextech */
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hero-content h1 {
+  color: #f0e6d2; /* Blanco brillante pergamino */
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Botones con estilo de la interfaz de Riot Client */
+.btn-gold {
+  background-color: #c8aa6e;
+  color: #010a13;
+  border: 1px solid #c8aa6e;
+  padding: 12px 28px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #f0e6d2;
+  border-color: #f0e6d2;
+  box-shadow: 0 0 15px rgba(200, 170, 110, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #f0e6d2;
+  border: 1px solid #c8aa6e;
+  padding: 12px 28px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: rgba(200, 170, 110, 0.1);
+  color: #ffffff;
+}
+
+/* ==========================================
+   SECCIÓN DE CAMPEONES (.roles-section)
+   ========================================== */
+.roles-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+  text-align: center;
+}
+
+.roles-section h2 {
+  color: #c8aa6e;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  color: #a09b8c;
+  font-size: 1rem;
+  margin-bottom: 48px;
+}
+
+/* ==========================================
+   LA CUADRÍCULA / REJILLA (.roles-grid)
+   ========================================== */
+.roles-grid {
+  display: grid;
+  /* Distribuye las tarjetas automáticamente en columnas de mínimo 240px */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+/* ==========================================
+   TARJETA INDIVIDUAL DE CAMPEÓN (.role-card)
+   ========================================== */
+.role-card {
+  background-color: #0a1428;     /* Fondo azul oscuro de los marcos de cartas */
+  border: 1px solid #1e2328;      /* Borde metálico oscuro */
+  border-top: 3px solid #c8aa6e;   /* Línea superior dorada distintiva */
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Efecto hover al pasar el ratón */
+.role-card:hover {
+  border-color: #c8aa6e;
+  transform: translateY(-5px); /* Salto suave estilo juego */
+  box-shadow: 0 10px 25px rgba(200, 170, 110, 0.2); /* Resplandor dorado */
+}
+
+/* Contenedor e Imagen del Campeón (Cuadrada y Perfecta) */
+.role-icon {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 16px;
+  border: 2px solid #c8aa6e; /* Marco dorado para el retrato */
+  border-radius: 4px;
+  overflow: hidden; /* Corta la imagen si es muy grande */
+  background-color: #010a13;
+}
+
+.role-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la foto del campeón sin deformarla */
+  display: block;
+}
+
+/* Nombre del Campeón */
+.role-card h3 {
+  color: #f0e6d2;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Título o Lore corto */
+.role-card p {
+  color: #a09b8c;
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE MODERNO
+   ========================================== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

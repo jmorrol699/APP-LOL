@@ -1,0 +1,36 @@
+<main class="lol-home">
+  
+  <section class="hero-lol">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <span class="hero-tag">BIENVENIDO A LA GRIETA</span>
+        <h1>FORJA TU LEYENDA</h1>
+        <p>Más de 140 campeones te esperan. Elige tu rol, perfecciona tu build y destruye el nexo enemigo junto a tu equipo.</p>
+        <div class="hero-actions">
+          <button class="btn-gold" routerLink="/campeones">VER CAMPEONES</button>
+          <button class="btn-outline" href="https://www.youtube.com/watch?v=BGt_8Vb03G0" target="_blank">VER CINEMÁTICA</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="roles-section">
+    <h2>Listado de personajes</h2>
+    <p class="section-desc">Todo lo que necesitas saber sobre los personajes del juego</p>
+    
+    <div class="roles-grid">
+      
+      @for(campeon of campeones; track campeon.id){
+        <div class="role-card">
+          <div class="role-icon">
+            <img src={{campeon.thumbnailUrl}} alt="campeon.name"/>
+          </div>
+          <h3>{{campeon.name}}</h3>
+          <p>{{campeon.title}}</p>
+        </div>
+      }
+
+    </div>
+  </section>
+
+</main>
