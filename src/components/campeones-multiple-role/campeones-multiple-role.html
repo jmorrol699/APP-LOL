@@ -1,0 +1,24 @@
+<div class="champions-list">
+@for(champion of campeones; track champion.id){
+  <div class="champion-card">
+    <img
+      class="champion-image"
+      [src]="champion.thumbnailUrl"
+      [alt]="champion.name"
+    />
+
+    <div class="champion-info">
+      <h3>{{ champion.name }}</h3>
+      <p class="title">{{ champion.title }}</p>
+
+      <div class="roles">
+        @for(role of champion.role; track role){
+            <span class="role-badge">
+                {{ role }}
+            </span>
+        }
+      </div>
+    </div>
+  </div>
+}
+</div>

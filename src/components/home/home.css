@@ -202,3 +202,23 @@
     gap: 12px;
   }
 }
+
+/* ==========================================
+   ROLES
+   ========================================== */
+.roles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.role-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #e3f2fd;
+  color: #1565c0;
+  font-size: 12px;
+  font-weight: 600;
+}

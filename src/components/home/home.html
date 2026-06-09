@@ -7,7 +7,7 @@
         <h1>FORJA TU LEYENDA</h1>
         <p>Más de 140 campeones te esperan. Elige tu rol, perfecciona tu build y destruye el nexo enemigo junto a tu equipo.</p>
         <div class="hero-actions">
-          <button class="btn-gold" routerLink="/campeones">VER CAMPEONES</button>
+          <button class="btn-gold" routerLink="/multiple-role">VER CAMPEONES</button>
           <button class="btn-outline" href="https://www.youtube.com/watch?v=BGt_8Vb03G0" target="_blank">VER CINEMÁTICA</button>
         </div>
       </div>
@@ -27,6 +27,11 @@
           </div>
           <h3>{{campeon.name}}</h3>
           <p>{{campeon.title}}</p>
+          <div class="roles-container">
+            @for(role of campeon.role; track role){
+              <span class="role-badge">{{ role }}</span>
+            }
+          </div>
         </div>
       }
 

@@ -18,4 +18,14 @@ public getCampeones(): Observable<Campeones[]>{
   return this._http.get<Campeones[]>(this._baseUrl + "/campeones");
 }
 
+public getCampeonesById(id: string): Observable<Campeones>{
+    //localhost:8080/api/campeones/6a0eacc4211dfe11cb09a637
+    return this._http.get<Campeones>(this._baseUrl + "/campeones/" + id);
+  }
+
+  public getMultipleRoleCampeones(): Observable<Campeones[]>{
+    //localhost:8080/api/campeones/filter/multiplerole
+    return this._http.get<Campeones[]>(this._baseUrl + "/campeones/filter/multiplerole");
+  }
+
 }

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CampeonesService } from '../../services/campeones-service';
 import { Campeones } from '../../model/campeones';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
