@@ -1,0 +1,146 @@
+.tanques-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  background-color: #010a13;
+  color: #a09b8c;
+  min-height: 80vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.tanques-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tanques-header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(200, 170, 110, 0.4);
+}
+
+.gold-text {
+  color: #c8aa6e;
+}
+
+.tanques-header p {
+  color: #cbd5e1;
+  font-size: 1.15rem;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.tanques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+.tanque-card {
+  display: flex;
+  background: linear-gradient(145deg, rgba(10, 20, 40, 0.8) 0%, rgba(5, 10, 20, 0.9) 100%);
+  border: 1px solid #1e2328;
+  border-left: 5px solid #c8aa6e;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  align-items: center;
+}
+
+.tanque-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(200, 170, 110, 0.15);
+  border-color: #c8aa6e;
+  background: linear-gradient(145deg, rgba(15, 30, 60, 0.9) 0%, rgba(10, 20, 40, 1) 100%);
+}
+
+.tanque-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #c8aa6e;
+  margin-right: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(200, 170, 110, 0.4);
+  background-color: #010a13;
+}
+
+.tanque-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tanque-card:hover .tanque-icon img {
+  transform: scale(1.1);
+}
+
+.tanque-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.tanque-info h3 {
+  color: #f0e6d2;
+  font-size: 1.5rem;
+  margin: 0 0 6px 0;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.title {
+  color: #a09b8c;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0 0 14px 0;
+}
+
+.roles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-badge {
+  padding: 5px 14px;
+  border-radius: 20px;
+  background-color: rgba(200, 170, 110, 0.15);
+  color: #c8aa6e;
+  border: 1px solid rgba(200, 170, 110, 0.4);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.2s ease;
+}
+
+.role-badge:hover {
+  background-color: rgba(200, 170, 110, 0.3);
+  color: #f0e6d2;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .tanques-header h1 {
+    font-size: 2.2rem;
+  }
+  .tanques-grid {
+    grid-template-columns: 1fr;
+  }
+  .tanque-card {
+    padding: 16px;
+  }
+  .tanque-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
+  }
+}

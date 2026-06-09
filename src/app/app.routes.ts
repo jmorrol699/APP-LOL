@@ -3,10 +3,12 @@ import { Contacto } from '../components/contacto/contacto';
 import { Home } from '../components/home/home';
 import { CampeonesMultipleRole } from '../components/campeones-multiple-role/campeones-multiple-role';
 import { CampeonesDetail } from '../components/campeones-detail/campeones-detail';
+import { Tanques } from '../components/tanques/tanques/tanques';
 
 export const routes: Routes = [
     {path: '', component: Home},
     {path: 'contacto', component: Contacto},
     {path: 'campeones/:id', component: CampeonesDetail},
-    {path: 'multiple-role', component: CampeonesMultipleRole}
+    {path: 'multiple-role', component: CampeonesMultipleRole},
+    {path: 'tanques', component: Tanques}
 ];

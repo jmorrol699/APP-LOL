@@ -1,0 +1,26 @@
+<main class="tanques-container">
+    <div class="tanques-header">
+        <h1 class="gold-text">VANGUARDIA INVENCIBLE</h1>
+        <p>Conoce a los colosos de la Grieta. Campeones diseñados para absorber el daño, iniciar peleas de equipo y
+            proteger a los aliados vulnerables.</p>
+    </div>
+
+    <div class="tanques-grid">
+        @for(tanque of tanques; track tanque.id){
+        <div class="tanque-card">
+            <div class="tanque-icon">
+                <img [src]="tanque.thumbnailUrl" [alt]="tanque.name" />
+            </div>
+            <div class="tanque-info">
+                <h3>{{ tanque.name }}</h3>
+                <p class="title">{{ tanque.title }}</p>
+                <div class="roles-container">
+                    @for(role of tanque.role; track role){
+                    <span class="role-badge">{{ role }}</span>
+                    }
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</main>
